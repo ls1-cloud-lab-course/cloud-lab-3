@@ -28,8 +28,9 @@ class Connection {
 
   auto receive(cloud::CloudMessage& msg) const -> bool;
 
-  // NOLINTNEXTLINE(modernize-use-nodiscard)
   auto send(const cloud::CloudMessage& msg) const -> bool;
+
+  bool connect_failed{false};
 
  private:
   int fd{-1};

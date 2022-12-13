@@ -45,7 +45,8 @@ Connection::Connection(const SocketAddress& address) {
   }
 
   if (connect(fd, req->ai_addr, req->ai_addrlen) == -1) {
-    throw std::runtime_error("perform_connect() failed");
+    // throw std::runtime_error("perform_connect() failed");
+    connect_failed = true;
   }
 
   freeaddrinfo(req);

@@ -23,7 +23,7 @@ other servers, in which case a new leader is elected.
 The leader can be run using the following command:
 
 ```
-./kvs-test -a 127.0.0.1:40000 -r 127.0.0.1:41000 -l
+./kvs-test -a 127.0.0.1:40000 -p 127.0.0.1:41000 -l
 ```
 
 The leader takes responsibility of the router of task 2.
